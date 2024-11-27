@@ -1,0 +1,17 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/worlblyx/public_html/
+    # Copy HTML files
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp 404.html $DEPLOYPATH
+    # Copy CSS folder
+    - /bin/cp -r css $DEPLOYPATH
+    # Copy JS folder
+    - /bin/cp -r js $DEPLOYPATH
+    # Copy image folder
+    - /bin/cp -r img $DEPLOYPATH
+    # Copy favicon and icons
+    - /bin/cp favicon.ico $DEPLOYPATH
+    - /bin/cp icon.png $DEPLOYPATH
+    - /bin/cp icon.svg $DEPLOYPATH
